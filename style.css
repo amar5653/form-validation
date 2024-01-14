@@ -1,0 +1,50 @@
+*{
+    margin:0;
+    padding:0;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+}
+.container{
+    width:100%;
+    height:100vh;
+    background: linear-gradient(rgb(0, 13, 128),rgb(22, 112, 107));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+form{
+    max-width:500px;
+    padding:20px;
+    background: #fff;
+    position: relative;
+    margin:20px auto;
+}
+form .fa-paper-plane{
+    color:rgb(226, 246, 226);
+    background-color: greenyellow;
+    width:40px;
+    height:40px;
+    border-radius: 50%;
+    padding:10px;
+    position: absolute;
+    top:-10%;
+    left:50%;
+}
+form div label,input{
+   font-size: 20px;
+    margin:10px auto;
+}
+form div input{
+    border:none;
+   
+}
+form div input::after{
+    width:100%;
+    height:3px;
+    color:black;
+    position:absolute;
+    bottom:0;
+    left:0;
+  top:20px;
+  right:0;
+}

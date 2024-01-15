@@ -9,31 +9,32 @@
 </head>
 <body>
     <div class="container">
-        <form action="submit">
+        <form>
             <i class="fa-solid fa-paper-plane"></i>
             <div class="name">
                 <label for="name">Full name</label>
-                <input type="text" id="name" placeholder="Enter your name">
+                <input type="text" id="name" placeholder="Enter your name" onkeyup="validateName()">
                 <span id="name-error"></span>
             </div>
             <div class="phoneNumber">
                 <label for="phoneNumber">Phone Number</label>
-                <input type="text" id="phoneNumber" placeholder="123 456 7899">
+                <input type="text" id="phoneNumber" placeholder="123-456-7899" onkeyup="validatePhone()">
                 <span id="phone-error"></span>
             </div>
             <div class="email">
                 <label for="email">Email</label>
-                <input type="email" id="email" placeholder="email@example.com">
+                <input type="text" id="email" placeholder="email@example.com" onkeyup="validateEmail()">
                 <span id="email-error"></span>
             </div>
             <div class="message">
-                <label for="message">Full name</label>
-                <input type="text" id="message" placeholder="Enter your message">
+                <label for="message">Enter your message</label>
+                <input type="text" id="message" style="height:100px;" placeholder="Enter your message" onkeyup="validateMessage()">
                 <span id="message-error"></span>
             </div>
-            <button id="submit">Submit</button>
-            <span id="submit-error"></span>
+            <button id="submit" onclick="validateForm()">Submit</button>
+            <span id="submit-error" ></span>
         </form>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>

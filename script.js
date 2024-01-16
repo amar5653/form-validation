@@ -40,12 +40,12 @@ function validateEmail() {
   if (email.value.length == 0) {
     emailError.innerHTML = "Email required!";
     return false;
-  } else if (
+  } if (
     !email.value.match(/^[A-Za-z]\._\-[0-9]*[@][A-Za-z]*[\.][a-z]{2,4}$/)
   ) {
     emailError.innerHTML = "Invalid Email!";
     return false;
-  } else {
+  } {
     emailError.innerHTML = "<i class='fa-solid fa-circle-check'></i>";
     return true;
   }
@@ -53,23 +53,24 @@ function validateEmail() {
 
 function validateMessage() {
     var message = document.getElementById("message");
-    var left = 30 - message;
+    var left = 30 - message.value.length;
     if(message.value.length < 30) {
-        messageError.innerHTML = left + "more characters left!";
+        messageError.innerHTML = left + " more characters left!";
         return false;
     }
     else {
         messageError.innerHTML = "<i class='fa-solid fa-circle-check'></i>";
+        return true;
     }
 }
 
 function validateForm() {
-    if(!validateEmail || !validateMessage || !validateName || !validatePhone) {
+    if(!validateEmail() || !validateMessage() || !validateName() || !validatePhone()) {
         submitError.innerHTML = "please fill form!";
         submitError.style.display = "block";
         setTimeout((function(){
             submitError.style.display = "none";
-        }),3000);
+        }),6000);
         return false;
     }
   
